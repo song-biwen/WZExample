@@ -25,14 +25,16 @@
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.rootViewController = nav;
-    self.window.backgroundColor = [UIColor whiteColor];
+    self.window.backgroundColor = [UIColor brownColor];
     [self.window makeKeyAndVisible];
     
     /** 导航栏 外观 */
+    /**导航栏 返回按钮颜色 */
     nav.navigationBar.tintColor = [UIColor whiteColor];
+     /** 导航栏颜色 */
     nav.navigationBar.barTintColor = [UIColor redColor];
+    /** 导航栏 标题属性 */
     nav.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName:[UIColor whiteColor],NSFontAttributeName:[UIFont systemFontOfSize:20]};
-    [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
     
     return YES;
 }
