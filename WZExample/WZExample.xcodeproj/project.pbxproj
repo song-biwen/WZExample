@@ -65,6 +65,7 @@
 		4CE32F491C27D8D40006A940 /* WZTextExample.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CE32F481C27D8D40006A940 /* WZTextExample.m */; };
 		4CE32F4C1C27DD000006A940 /* WZTextAttributes1.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CE32F4B1C27DD000006A940 /* WZTextAttributes1.m */; };
 		4CE32F501C27E8C80006A940 /* WZTextAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CE32F4F1C27E8C80006A940 /* WZTextAttribute.m */; };
+		4CE32F531C2814840006A940 /* UIImage+WZImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CE32F521C2814840006A940 /* UIImage+WZImage.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -190,6 +191,8 @@
 		4CE32F4B1C27DD000006A940 /* WZTextAttributes1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WZTextAttributes1.m; sourceTree = "<group>"; };
 		4CE32F4E1C27E8C80006A940 /* WZTextAttribute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WZTextAttribute.h; sourceTree = "<group>"; };
 		4CE32F4F1C27E8C80006A940 /* WZTextAttribute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WZTextAttribute.m; sourceTree = "<group>"; };
+		4CE32F511C2814840006A940 /* UIImage+WZImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+WZImage.h"; sourceTree = "<group>"; };
+		4CE32F521C2814840006A940 /* UIImage+WZImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+WZImage.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -471,6 +474,8 @@
 			children = (
 				4CE32F4E1C27E8C80006A940 /* WZTextAttribute.h */,
 				4CE32F4F1C27E8C80006A940 /* WZTextAttribute.m */,
+				4CE32F511C2814840006A940 /* UIImage+WZImage.h */,
+				4CE32F521C2814840006A940 /* UIImage+WZImage.m */,
 			);
 			path = WZTextKit;
 			sourceTree = "<group>";
@@ -621,6 +626,7 @@
 				4C2478981C23DC3900D8312D /* WZImageExample.m in Sources */,
 				4C6208891C228693009CCEC0 /* AFSecurityPolicy.m in Sources */,
 				4C5FFF2D1C21343300A4FADD /* WZNavigationController.m in Sources */,
+				4CE32F531C2814840006A940 /* UIImage+WZImage.m in Sources */,
 				4C62084F1C22439C009CCEC0 /* MJExtensionConst.m in Sources */,
 				4C6208971C22C23C009CCEC0 /* MBProgressHUD+MJ.m in Sources */,
 				4C5FFF301C21346A00A4FADD /* WZTableViewController.m in Sources */,

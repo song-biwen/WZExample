@@ -8,6 +8,7 @@
 
 #import "WZTextAttributes1.h"
 #import "WZHeaderDefine.h"
+#import "UIImage+WZImage.h"
 
 
 #define KLabelHeight 30
@@ -20,7 +21,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.view.backgroundColor = [UIColor colorWithWhite:0.863 alpha:1.000];
+    self.view.backgroundColor = [UIColor whiteColor];
     
     NSMutableAttributedString *mutableAttributeString = [[NSMutableAttributedString alloc] init];
     
@@ -41,7 +42,33 @@
         [mutableAttributeString appendAttributedString:[self padding]];
     }
     
-    UILabel *tmp_label = [[UILabel alloc] initWithFrame:(CGRect) {CGPointMake(0, 100),CGSizeMake(KScreenWidth, KLabelHeight)}];
+    {
+        
+        CGSize size = CGSizeMake(20, 20);
+        UIImage *background = [UIImage imageWithSize:size drawBlock:^(CGContextRef context) {
+            UIColor *c0 = [UIColor colorWithRed:0.054 green:0.879 blue:0.000 alpha:1.000];
+            UIColor *c1 = [UIColor colorWithRed:0.869 green:1.000 blue:0.030 alpha:1.000];
+            [c0 setFill];
+            CGContextFillRect(context, CGRectMake(0, 0, size.width, size.height));
+            [c1 setStroke];
+            CGContextSetLineWidth(context, 2);
+            for (int i = 0; i < size.width * 2; i+= 4) {
+                CGContextMoveToPoint(context, i, -2);
+                CGContextAddLineToPoint(context, i - size.height, size.height + 2);
+            }
+            CGContextStrokePath(context);
+        }];
+        /** 属性 */
+        NSDictionary *attribute_dic = @{NSFontAttributeName:[UIFont boldSystemFontOfSize:30],
+                                        NSForegroundColorAttributeName:[UIColor colorWithPatternImage:background]
+                                        };
+        NSMutableAttributedString *tmp_str = [[NSMutableAttributedString alloc] initWithString:@"Background Image" attributes:attribute_dic];
+        
+        [mutableAttributeString appendAttributedString:tmp_str];
+        [mutableAttributeString appendAttributedString:[self padding]];
+    }
+    
+    UILabel *tmp_label = [[UILabel alloc] initWithFrame:(CGRect) {CGPointMake(0, 100),CGSizeMake(KScreenWidth, kScreenHeight - 44 - 20)}];
     tmp_label.textAlignment = NSTextAlignmentCenter;
     tmp_label.attributedText = mutableAttributeString;
     tmp_label.numberOfLines = 0;
