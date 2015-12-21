@@ -20,8 +20,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"首页";
+    
+    
     self.dataSource = [[NSMutableArray alloc] initWithObjects:@"Model",@"Image",@"Text",@"Feed List Demo", nil];
-    self.classArray = [[NSMutableArray alloc] initWithObjects:@"WZModelExample", nil];
+    self.classArray = [[NSMutableArray alloc] initWithObjects:@"WZModelExample",@"WZImageExample", nil];
     [self.tableView reloadData];
     
 }
@@ -52,7 +54,6 @@
 #pragma mark - UITableViewDelegate
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    NSLog(@"%@",self.navigationController.childViewControllers);
     if (indexPath.row < self.classArray.count) {
         NSString *className = self.classArray[indexPath.row];
         NSString *title_name = self.dataSource[indexPath.row];
@@ -65,6 +66,7 @@
         }
     }
     
+    [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
 /*

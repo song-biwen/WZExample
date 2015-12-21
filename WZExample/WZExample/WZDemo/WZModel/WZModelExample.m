@@ -25,7 +25,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    NSLog(@"%@",self.navigationController.childViewControllers);
+    
+    /** 设置背景颜色，跳转卡顿的问题就会解决 */
+    self.view.backgroundColor = [UIColor whiteColor];
+    
     /** 
      command=rapi.square.getMessage&pubType=&session=rhdf0nxy16ogcvizha3m98el&sign=b960183541179f153dd1b65f5cfa2a65&square_id=0&timestamp=20154617104635&uiniqueid=20154617104635132618600000000000&version=3.1.0
      */
@@ -52,6 +55,8 @@
             id res = [NSJSONSerialization JSONObjectWithData:responseObject options:0 error:nil];
             /** 数据转字符串 */
             NSString *aString = [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding];
+            [[[UIAlertView alloc] initWithTitle:aString message:nil delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil, nil] show];
+            
 //            NSLog(@".....%@",aString);
 //            NSLog(@".....%@",res);
             /** 数组转模型 */
