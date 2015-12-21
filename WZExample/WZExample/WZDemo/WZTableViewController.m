@@ -23,7 +23,7 @@
     
     
     self.dataSource = [[NSMutableArray alloc] initWithObjects:@"Model",@"Image",@"Text",@"Feed List Demo", nil];
-    self.classArray = [[NSMutableArray alloc] initWithObjects:@"WZModelExample",@"WZImageExample", nil];
+    self.classArray = [[NSMutableArray alloc] initWithObjects:@"WZModelExample",@"WZImageExample",@"WZTextExample", nil];
     [self.tableView reloadData];
     
 }

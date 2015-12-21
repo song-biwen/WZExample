@@ -60,6 +60,9 @@
 		4C6208A01C22C7CD009CCEC0 /* WZListDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C62089F1C22C7CD009CCEC0 /* WZListDataModel.m */; };
 		4C6208A31C22C90D009CCEC0 /* WZCommentDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C6208A21C22C90D009CCEC0 /* WZCommentDataModel.m */; };
 		4C6208A91C22CAF5009CCEC0 /* WZMessageDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C6208A81C22CAF5009CCEC0 /* WZMessageDataModel.m */; };
+		4CE32F411C27B1620006A940 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CE32F401C27B1620006A940 /* UIKit.framework */; };
+		4CE32F431C27D2F10006A940 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CE32F421C27D2F10006A940 /* QuartzCore.framework */; };
+		4CE32F491C27D8D40006A940 /* WZTextExample.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CE32F481C27D8D40006A940 /* WZTextExample.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -177,6 +180,10 @@
 		4C6208A21C22C90D009CCEC0 /* WZCommentDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WZCommentDataModel.m; sourceTree = "<group>"; };
 		4C6208A71C22CAF5009CCEC0 /* WZMessageDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WZMessageDataModel.h; sourceTree = "<group>"; };
 		4C6208A81C22CAF5009CCEC0 /* WZMessageDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WZMessageDataModel.m; sourceTree = "<group>"; };
+		4CE32F401C27B1620006A940 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		4CE32F421C27D2F10006A940 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		4CE32F471C27D8D40006A940 /* WZTextExample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WZTextExample.h; sourceTree = "<group>"; };
+		4CE32F481C27D8D40006A940 /* WZTextExample.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WZTextExample.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -184,6 +191,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4CE32F431C27D2F10006A940 /* QuartzCore.framework in Frameworks */,
+				4CE32F411C27B1620006A940 /* UIKit.framework in Frameworks */,
 				4C5FFF341C213C1600A4FADD /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -309,6 +318,7 @@
 		4C5FFF241C21343300A4FADD /* WZDemo */ = {
 			isa = PBXGroup;
 			children = (
+				4CE32F461C27D8AA0006A940 /* WZText */,
 				4C24789A1C23F63300D8312D /* WZResource */,
 				4C2478951C23DC1A00D8312D /* WZImage */,
 				4C62086D1C2256B9009CCEC0 /* WZModel */,
@@ -325,6 +335,8 @@
 		4C5FFF331C213C0700A4FADD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4CE32F421C27D2F10006A940 /* QuartzCore.framework */,
+				4CE32F401C27B1620006A940 /* UIKit.framework */,
 				4C5FFF311C213B9E00A4FADD /* Foundation.framework */,
 			);
 			path = Frameworks;
@@ -434,6 +446,15 @@
 				4C6208A81C22CAF5009CCEC0 /* WZMessageDataModel.m */,
 			);
 			path = DataModel;
+			sourceTree = "<group>";
+		};
+		4CE32F461C27D8AA0006A940 /* WZText */ = {
+			isa = PBXGroup;
+			children = (
+				4CE32F471C27D8D40006A940 /* WZTextExample.h */,
+				4CE32F481C27D8D40006A940 /* WZTextExample.m */,
+			);
+			path = WZText;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -600,6 +621,7 @@
 				4C6208861C228693009CCEC0 /* AFHTTPRequestOperationManager.m in Sources */,
 				4C6208851C228693009CCEC0 /* AFHTTPRequestOperation.m in Sources */,
 				4C6208551C22439C009CCEC0 /* NSObject+MJCoding.m in Sources */,
+				4CE32F491C27D8D40006A940 /* WZTextExample.m in Sources */,
 				4C5FFEEE1C20FAA100A4FADD /* main.m in Sources */,
 				4C2478C41C23FA3D00D8312D /* UIView+LayoutMethods.m in Sources */,
 				4C6208521C22439C009CCEC0 /* MJPropertyKey.m in Sources */,

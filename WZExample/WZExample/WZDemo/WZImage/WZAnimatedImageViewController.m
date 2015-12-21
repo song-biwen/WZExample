@@ -9,6 +9,7 @@
 #import "WZAnimatedImageViewController.h"
 #import "UIView+LayoutMethods.h"
 #import "WZHeaderDefine.h"
+#import <QuartzCore/CADisplayLink.h>
 
 
 #define KLabelHeight 30
@@ -30,6 +31,11 @@
     [self.scrollView addSubview:self.temporaryLabel];
     self.scrollView.contentSize = self.temporaryLabel.size;
     [self configueSubViewsOfScrollViewWithSender:self.dataSorece];
+    
+//    CADisplayLink *link = [CADisplayLink displayLinkWithTarget:self selector:@selector()];
+//    link.frameInterval = 2;
+//    [link addToRunLoop:[NSRunLoop mainRunLoop] forMode:NSDefaultRunLoopMode];
+    
 }
 
 /** 构建scrollView */
@@ -55,18 +61,15 @@
             
             /** view */
             tmp_view.height = 10 + image_view.height + 8 + KLabelHeight;
+            UIView *last_View = self.scrollView.subviews.lastObject;
+            tmp_view.top = last_View.bottom;
             [tmp_view addSubview:image_view];
             [tmp_view addSubview:tmp_label];
             
             
             /** scrollView */
-            UIView *last_View = self.scrollView.subviews.lastObject;
-            tmp_view.top = last_View.bottom;
-            float height = self.scrollView.contentSize.height;
-            height += tmp_view.height;
-           
             [self.scrollView addSubview:tmp_view];
-            self.scrollView.contentSize = CGSizeMake(KScreenWidth, height);
+            self.scrollView.contentSize = CGSizeMake(KScreenWidth, tmp_view.bottom);
             
             
         }];
