@@ -48,7 +48,7 @@ typedef NS_ENUM(NSUInteger ,WZImageType) {
 
 @property (nonatomic, readonly, getter=isFinalized) BOOL finalized;
 
-- (instancetype)initWithScale:(CGFloat)scale;
+- (instancetype)initWithScale:(CGFloat)scale; NS_DESIGNATED_INITIALIZER
 
 - (BOOL)updateData:(NSData *)data final:(BOOL)final;
 

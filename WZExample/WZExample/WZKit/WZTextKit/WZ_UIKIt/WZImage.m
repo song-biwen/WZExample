@@ -13,7 +13,7 @@
 
 @implementation WZImage
 {
-    YYImageDecoder *_decoder;
+    WZImageDecoder *_decoder;
     NSArray *_preloadedFrames;
     OSSpinLock _preloadedLock;
     NSUInteger _bytesPerFrame;

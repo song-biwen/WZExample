@@ -28,7 +28,11 @@
     CGImageSourceRef _source;
     
     UIImageOrientation _orientation;
-    OSSpin
+    NSArray *_frames;
+    BOOL _needFrameIndex;
+    CGContextRef _blendCanvas;
+    
+    
     /**
      pthread_mutex_t _lock;
      
@@ -56,6 +60,19 @@
 
 - (instancetype)initWithScale:(CGFloat)scale {
     
+    self = [super init];
+    if (scale <= 0) scale = 1;
+    _scale = scale;
+    return self;
+    
+    /** 
+     self = [super init];
+     if (scale <= 0) scale = 1;
+     _scale = scale;
+     _framesLock = OS_SPINLOCK_INIT;
+     pthread_mutex_init_recursive(&_lock, true);
+     return self;
+     */
 }
 
 - (BOOL)updateData:(NSData *)data final:(BOOL)final {
@@ -64,6 +81,12 @@
 
 + (instancetype)decoderWithData:(NSData *)data scale:(CGFloat)scale {
     
+    if (!data) return nil;
+    
+    WZImageDecoder *decoder = [[WZImageDecoder alloc] initWithScale:scale];
+    [decoder updateData:data final:YES];
+    if (decoder.frameCount == 0) return nil;
+    return decoder;
 }
 
 //- (YYImageFrame *)frameAtIndex:(NSUInteger)index decodeForDisplay:(BOOL)decodeForDisplay;

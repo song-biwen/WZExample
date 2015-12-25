@@ -23,7 +23,6 @@
 		4C2478C31C23FA3D00D8312D /* UIView+HandyAutoLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C2478BB1C23FA3D00D8312D /* UIView+HandyAutoLayout.m */; };
 		4C2478C41C23FA3D00D8312D /* UIView+LayoutMethods.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C2478BD1C23FA3D00D8312D /* UIView+LayoutMethods.m */; };
 		4C4928951C2A752800039DA3 /* WZImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C4928941C2A752800039DA3 /* WZImage.m */; };
-		4C49289C1C2A815300039DA3 /* YYImageCoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C49289B1C2A815300039DA3 /* YYImageCoder.m */; };
 		4C49289F1C2A845C00039DA3 /* WZAnimatedImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C49289E1C2A845C00039DA3 /* WZAnimatedImageView.m */; };
 		4C4AAC2B1C28F756009BDA93 /* NSAttributedString+WZAttributedString.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C4AAC2A1C28F756009BDA93 /* NSAttributedString+WZAttributedString.m */; };
 		4C5FFEEE1C20FAA100A4FADD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C5FFEED1C20FAA100A4FADD /* main.m */; };
@@ -66,6 +65,7 @@
 		4C6208A91C22CAF5009CCEC0 /* WZMessageDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C6208A81C22CAF5009CCEC0 /* WZMessageDataModel.m */; };
 		4C7C64C61C2A435F005EDED1 /* UIImage+WZImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C7C64C51C2A435F005EDED1 /* UIImage+WZImage.m */; };
 		4C7C64C91C2A4384005EDED1 /* UIColor+WZColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C7C64C81C2A4384005EDED1 /* UIColor+WZColor.m */; };
+		4C888EE01C2D243800A798AB /* YYImageCoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C888EDF1C2D243800A798AB /* YYImageCoder.m */; };
 		4CE32F411C27B1620006A940 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CE32F401C27B1620006A940 /* UIKit.framework */; };
 		4CE32F431C27D2F10006A940 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CE32F421C27D2F10006A940 /* QuartzCore.framework */; };
 		4CE32F491C27D8D40006A940 /* WZTextExample.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CE32F481C27D8D40006A940 /* WZTextExample.m */; };
@@ -113,8 +113,6 @@
 		4C2478C71C23FCC300D8312D /* WZHeaderDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WZHeaderDefine.h; sourceTree = "<group>"; };
 		4C4928931C2A752800039DA3 /* WZImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WZImage.h; sourceTree = "<group>"; };
 		4C4928941C2A752800039DA3 /* WZImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WZImage.m; sourceTree = "<group>"; };
-		4C49289A1C2A815300039DA3 /* YYImageCoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYImageCoder.h; sourceTree = "<group>"; };
-		4C49289B1C2A815300039DA3 /* YYImageCoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYImageCoder.m; sourceTree = "<group>"; };
 		4C49289D1C2A845C00039DA3 /* WZAnimatedImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WZAnimatedImageView.h; sourceTree = "<group>"; };
 		4C49289E1C2A845C00039DA3 /* WZAnimatedImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WZAnimatedImageView.m; sourceTree = "<group>"; };
 		4C4AAC291C28F756009BDA93 /* NSAttributedString+WZAttributedString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSAttributedString+WZAttributedString.h"; sourceTree = "<group>"; };
@@ -200,6 +198,8 @@
 		4C7C64C51C2A435F005EDED1 /* UIImage+WZImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+WZImage.m"; sourceTree = "<group>"; };
 		4C7C64C71C2A4384005EDED1 /* UIColor+WZColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+WZColor.h"; sourceTree = "<group>"; };
 		4C7C64C81C2A4384005EDED1 /* UIColor+WZColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+WZColor.m"; sourceTree = "<group>"; };
+		4C888EDE1C2D243800A798AB /* YYImageCoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYImageCoder.h; sourceTree = "<group>"; };
+		4C888EDF1C2D243800A798AB /* YYImageCoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYImageCoder.m; sourceTree = "<group>"; };
 		4CE32F401C27B1620006A940 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		4CE32F421C27D2F10006A940 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		4CE32F471C27D8D40006A940 /* WZTextExample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WZTextExample.h; sourceTree = "<group>"; };
@@ -482,8 +482,8 @@
 				4C7C64C81C2A4384005EDED1 /* UIColor+WZColor.m */,
 				4C4928931C2A752800039DA3 /* WZImage.h */,
 				4C4928941C2A752800039DA3 /* WZImage.m */,
-				4C49289A1C2A815300039DA3 /* YYImageCoder.h */,
-				4C49289B1C2A815300039DA3 /* YYImageCoder.m */,
+				4C888EDE1C2D243800A798AB /* YYImageCoder.h */,
+				4C888EDF1C2D243800A798AB /* YYImageCoder.m */,
 				4C49289D1C2A845C00039DA3 /* WZAnimatedImageView.h */,
 				4C49289E1C2A845C00039DA3 /* WZAnimatedImageView.m */,
 			);
@@ -692,6 +692,7 @@
 				4C6208561C22439C009CCEC0 /* NSObject+MJKeyValue.m in Sources */,
 				4C6208541C22439C009CCEC0 /* NSObject+MJClass.m in Sources */,
 				4C7C64C61C2A435F005EDED1 /* UIImage+WZImage.m in Sources */,
+				4C888EE01C2D243800A798AB /* YYImageCoder.m in Sources */,
 				4C6208901C22A6AB009CCEC0 /* AFNetworkActivityLogger.m in Sources */,
 				4C62084E1C22439C009CCEC0 /* MJDictionaryCache.m in Sources */,
 				4C62088B1C228693009CCEC0 /* AFURLRequestSerialization.m in Sources */,
@@ -699,7 +700,6 @@
 				4C6208A31C22C90D009CCEC0 /* WZCommentDataModel.m in Sources */,
 				4C6208871C228693009CCEC0 /* AFHTTPSessionManager.m in Sources */,
 				4C6208A91C22CAF5009CCEC0 /* WZMessageDataModel.m in Sources */,
-				4C49289C1C2A815300039DA3 /* YYImageCoder.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
