@@ -17,4 +17,11 @@
 #define KImageTitle @"image_title"
 #define KColor(r,g,b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1.0]
 
+
+#ifndef UIColorHex
+#define UIColorHex(_hex_) []
+
+/**
+ UIColorHex(_hex_)   [UIColor colorWithHexString:((__bridge NSString *)CFSTR(#_hex_))]
+ */
 #endif /* WZHeaderDefine_h */
