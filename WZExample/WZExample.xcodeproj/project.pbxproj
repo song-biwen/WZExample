@@ -65,6 +65,7 @@
 		4C6208A91C22CAF5009CCEC0 /* WZMessageDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C6208A81C22CAF5009CCEC0 /* WZMessageDataModel.m */; };
 		4C7C64C61C2A435F005EDED1 /* UIImage+WZImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C7C64C51C2A435F005EDED1 /* UIImage+WZImage.m */; };
 		4C7C64C91C2A4384005EDED1 /* UIColor+WZColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C7C64C81C2A4384005EDED1 /* UIColor+WZColor.m */; };
+		4C888F1D1C2D480300A798AB /* WZ_TTTAttributedLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C888F1C1C2D480300A798AB /* WZ_TTTAttributedLabel.m */; };
 		4CE32F411C27B1620006A940 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CE32F401C27B1620006A940 /* UIKit.framework */; };
 		4CE32F431C27D2F10006A940 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CE32F421C27D2F10006A940 /* QuartzCore.framework */; };
 		4CE32F491C27D8D40006A940 /* WZTextExample.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CE32F481C27D8D40006A940 /* WZTextExample.m */; };
@@ -197,6 +198,8 @@
 		4C7C64C51C2A435F005EDED1 /* UIImage+WZImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+WZImage.m"; sourceTree = "<group>"; };
 		4C7C64C71C2A4384005EDED1 /* UIColor+WZColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+WZColor.h"; sourceTree = "<group>"; };
 		4C7C64C81C2A4384005EDED1 /* UIColor+WZColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+WZColor.m"; sourceTree = "<group>"; };
+		4C888F1B1C2D480300A798AB /* WZ_TTTAttributedLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WZ_TTTAttributedLabel.h; sourceTree = "<group>"; };
+		4C888F1C1C2D480300A798AB /* WZ_TTTAttributedLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WZ_TTTAttributedLabel.m; sourceTree = "<group>"; };
 		4CE32F401C27B1620006A940 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		4CE32F421C27D2F10006A940 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		4CE32F471C27D8D40006A940 /* WZTextExample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WZTextExample.h; sourceTree = "<group>"; };
@@ -502,6 +505,8 @@
 				4C7C64C31C2A435F005EDED1 /* WZ_UIKIt */,
 				4CE32F4E1C27E8C80006A940 /* WZTextAttribute.h */,
 				4CE32F4F1C27E8C80006A940 /* WZTextAttribute.m */,
+				4C888F1B1C2D480300A798AB /* WZ_TTTAttributedLabel.h */,
+				4C888F1C1C2D480300A798AB /* WZ_TTTAttributedLabel.m */,
 				4C4AAC291C28F756009BDA93 /* NSAttributedString+WZAttributedString.h */,
 				4C4AAC2A1C28F756009BDA93 /* NSAttributedString+WZAttributedString.m */,
 			);
@@ -658,6 +663,7 @@
 				4C6208971C22C23C009CCEC0 /* MBProgressHUD+MJ.m in Sources */,
 				4C5FFF301C21346A00A4FADD /* WZTableViewController.m in Sources */,
 				4C62088A1C228693009CCEC0 /* AFURLConnectionOperation.m in Sources */,
+				4C888F1D1C2D480300A798AB /* WZ_TTTAttributedLabel.m in Sources */,
 				4C6208A01C22C7CD009CCEC0 /* WZListDataModel.m in Sources */,
 				4C6208701C2256D1009CCEC0 /* WZModelExample.m in Sources */,
 				4C6208991C22C23C009CCEC0 /* MBProgressHUD.m in Sources */,
