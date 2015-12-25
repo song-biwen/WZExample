@@ -55,29 +55,30 @@
 }
 
 - (instancetype)initWithData:(NSData *)data scale:(CGFloat)scale {
-    
+    return nil;
 }
 
 
 #pragma mark - WZAnimatedImage
 
 - (NSUInteger)animatedImageFrameCount {
-    
+    return 0;
 }
 
 - (NSUInteger)animatedImageLoopCount {
-    
+    return 0;
 }
 
 - (NSUInteger)animatedImageBytesPerFrame {
-    
+    return 0;
 }
 
 - (UIImage *)animatedImageFrameAtIndex:(NSUInteger)index {
-    
+    return nil;
 }
 
 - (NSTimeInterval)animatedImageDurationAtIndex:(NSUInteger)index {
-    
+    return 0;
 }
+
 @end
