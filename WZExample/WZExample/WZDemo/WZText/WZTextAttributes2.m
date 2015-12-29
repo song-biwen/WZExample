@@ -10,7 +10,7 @@
 #import "WZHeaderDefine.h"
 #import <CoreText/CoreText.h>
 
-
+#define KSize CGSizeMake(KScreenWidth - 20, MAXFLOAT)
 @interface WZTextAttributes2 ()
 
 @end
@@ -83,8 +83,9 @@
     [mutableAttributeStr insertAttributedString:[[NSAttributedString alloc] initWithString:str attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:17]}] atIndex:0];
     
     //NSFontAttributeName:[UIFont systemFontOfSize:18],很重要，不然size计算不准确
-    CGSize size = [mutableAttributeStr boundingRectWithSize:CGSizeMake(KScreenWidth - 20, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading context:nil].size;
+    CGSize size = [mutableAttributeStr boundingRectWithSize:KSize options:NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading context:nil].size;
     
+    //计算还是不准确
     self.label.frame = (CGRect){CGPointMake(10, 0),CGSizeMake(size.width, size.height + 20)};
     self.label.attributedText = mutableAttributeStr;
     
@@ -96,12 +97,36 @@
 
 - (CGSize)sizeConstrainedToSize:(CGSize)maxSize andAttributedString:(NSAttributedString *)attributedString
 {
-    CFMutableAttributedStringRef optimizedAttributedText = CFAttributedStringCreateMutableCopy(kCFAllocatorDefault, attributedString.length,  (CFMutableAttributedStringRef)attributedString);
-    CTFramesetterRef framesetter = CTFramesetterCreateWithAttributedString(optimizedAttributedText);
+    
+    CTFramesetterRef framesetter = CTFramesetterCreateWithAttributedString((CFMutableAttributedStringRef)attributedString);
+    
+    CFRange rangeToSize = CFRangeMake(0, (CFIndex)[attributedString length]);
+    CGSize constraints = maxSize;
+    
+    CGMutablePathRef path = CGPathCreateMutable();
+    CGPathAddRect(path, NULL, CGRectMake(0.0f, 0.0f, constraints.width, MAXFLOAT));
+    CTFrameRef frame = CTFramesetterCreateFrame(framesetter, CFRangeMake(0, 0), path, NULL);
+    CFArrayRef lines = CTFrameGetLines(frame);
+    
+    if (CFArrayGetCount(lines) > 1) {
+        NSInteger lastVisibleLineIndex = CFArrayGetCount(lines) - 1;
+        CTLineRef lastVisibleLine = CFArrayGetValueAtIndex(lines, lastVisibleLineIndex);
+        
+        CFRange rangeToLayout = CTLineGetStringRange(lastVisibleLine);
+        rangeToSize = CFRangeMake(0, rangeToLayout.location + rangeToLayout.length);
+    }
+    
+    CFRelease(frame);
+    CGPathRelease(path);
+
+  
     
     CFRange fitCFRange = CFRangeMake(0,0);
+    CGSize suggestedSize = CTFramesetterSuggestFrameSizeWithConstraints(framesetter, rangeToSize, NULL, constraints, NULL);
     CGSize sz = CTFramesetterSuggestFrameSizeWithConstraints(framesetter,CFRangeMake(0,attributedString.length),NULL,maxSize,&fitCFRange);
-    return CGSizeMake( floorf(sz.width+1) , floorf(sz.height+1) );
+    sz = suggestedSize;
+    
+    return CGSizeMake(floorf(sz.width+1) , floorf(sz.height+1) );
 }
 
 
