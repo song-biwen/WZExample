@@ -18,8 +18,24 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.dataSource = [[NSMutableArray alloc] initWithObjects:@"Text Attributes 1",@"Text Attributes 2",@"Text Attachments",@"Text Edit",@"Text Parser (Markdown)",@"Text Parser (Emoticon)",@"Text Binding",@"Copy and Paste",@"Undo and Redo",@"Ruby Annotation",@"Async Display", nil];
-    self.class_names = [[NSMutableArray alloc] initWithObjects:@"WZTextAttributes1",@"WZTextAttributes2", nil];
+    self.dataSource = [[NSMutableArray alloc] initWithObjects:
+                       @"Text Attributes 1",
+                       @"Text Attributes 2",
+                       @"Text Attachments",
+                       @"Text Edit",
+                       @"Text Parser (Markdown)",
+                       @"Text Parser (Emoticon)",
+                       @"Text Binding",
+                       @"Copy and Paste",
+                       @"Undo and Redo",
+                       @"Ruby Annotation",
+                       @"Async Display",
+                       nil];
+    self.class_names = [[NSMutableArray alloc] initWithObjects:
+                        @"WZTextAttributes1",
+                        @"WZTextAttributes2",
+                        @"WZTextAttributes3",
+                        nil];
     [self.tableView reloadData];
 }
 
