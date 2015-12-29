@@ -25,6 +25,8 @@
 		4C4928951C2A752800039DA3 /* WZImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C4928941C2A752800039DA3 /* WZImage.m */; };
 		4C49289F1C2A845C00039DA3 /* WZAnimatedImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C49289E1C2A845C00039DA3 /* WZAnimatedImageView.m */; };
 		4C4AAC2B1C28F756009BDA93 /* NSAttributedString+WZAttributedString.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C4AAC2A1C28F756009BDA93 /* NSAttributedString+WZAttributedString.m */; };
+		4C52D3161C31226A00E60EB8 /* WZTextAttributes2.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C52D3151C31226A00E60EB8 /* WZTextAttributes2.m */; };
+		4C52D3181C31348100E60EB8 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C52D3171C31348100E60EB8 /* CoreText.framework */; };
 		4C5FFEEE1C20FAA100A4FADD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C5FFEED1C20FAA100A4FADD /* main.m */; };
 		4C5FFEF91C20FAA200A4FADD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C5FFEF81C20FAA200A4FADD /* Assets.xcassets */; };
 		4C5FFEFC1C20FAA200A4FADD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C5FFEFA1C20FAA200A4FADD /* LaunchScreen.storyboard */; };
@@ -117,6 +119,9 @@
 		4C49289E1C2A845C00039DA3 /* WZAnimatedImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WZAnimatedImageView.m; sourceTree = "<group>"; };
 		4C4AAC291C28F756009BDA93 /* NSAttributedString+WZAttributedString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSAttributedString+WZAttributedString.h"; sourceTree = "<group>"; };
 		4C4AAC2A1C28F756009BDA93 /* NSAttributedString+WZAttributedString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSAttributedString+WZAttributedString.m"; sourceTree = "<group>"; };
+		4C52D3141C31226A00E60EB8 /* WZTextAttributes2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WZTextAttributes2.h; sourceTree = "<group>"; };
+		4C52D3151C31226A00E60EB8 /* WZTextAttributes2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WZTextAttributes2.m; sourceTree = "<group>"; };
+		4C52D3171C31348100E60EB8 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 		4C5FFEE91C20FAA100A4FADD /* WZExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WZExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C5FFEED1C20FAA100A4FADD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4C5FFEF81C20FAA200A4FADD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -215,6 +220,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C52D3181C31348100E60EB8 /* CoreText.framework in Frameworks */,
 				4CE32F431C27D2F10006A940 /* QuartzCore.framework in Frameworks */,
 				4CE32F411C27B1620006A940 /* UIKit.framework in Frameworks */,
 				4C5FFF341C213C1600A4FADD /* Foundation.framework in Frameworks */,
@@ -359,6 +365,7 @@
 		4C5FFF331C213C0700A4FADD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4C52D3171C31348100E60EB8 /* CoreText.framework */,
 				4CE32F421C27D2F10006A940 /* QuartzCore.framework */,
 				4CE32F401C27B1620006A940 /* UIKit.framework */,
 				4C5FFF311C213B9E00A4FADD /* Foundation.framework */,
@@ -495,6 +502,8 @@
 				4CE32F481C27D8D40006A940 /* WZTextExample.m */,
 				4CE32F4A1C27DD000006A940 /* WZTextAttributes1.h */,
 				4CE32F4B1C27DD000006A940 /* WZTextAttributes1.m */,
+				4C52D3141C31226A00E60EB8 /* WZTextAttributes2.h */,
+				4C52D3151C31226A00E60EB8 /* WZTextAttributes2.m */,
 			);
 			path = WZText;
 			sourceTree = "<group>";
@@ -672,6 +681,7 @@
 				4C62088D1C228693009CCEC0 /* AFURLSessionManager.m in Sources */,
 				4C4928951C2A752800039DA3 /* WZImage.m in Sources */,
 				4C2478C31C23FA3D00D8312D /* UIView+HandyAutoLayout.m in Sources */,
+				4C52D3161C31226A00E60EB8 /* WZTextAttributes2.m in Sources */,
 				4CE32F501C27E8C80006A940 /* WZTextAttribute.m in Sources */,
 				4C5FFF2B1C21343300A4FADD /* AppDelegate.m in Sources */,
 				4CE32F4C1C27DD000006A940 /* WZTextAttributes1.m in Sources */,
