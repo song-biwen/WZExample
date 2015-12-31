@@ -79,7 +79,7 @@
     [mutableAttributeStr insertAttributedString:[[NSAttributedString alloc] initWithString:@"\n"] atIndex:0];
     [mutableAttributeStr insertAttributedString:[[NSAttributedString alloc] initWithString:@"\n"] atIndex:0];
     
-    [mutableAttributeStr insertAttributedString:[[NSAttributedString alloc] initWithString:str attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:17]}] atIndex:0];
+    [mutableAttributeStr insertAttributedString:[[NSAttributedString alloc] initWithString:str attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:14]}] atIndex:0];
     
     [self.ttt_AttributedLabel setAttributedText:mutableAttributeStr];
     /** (CGSize) size = (width = 301, height = 517) */
